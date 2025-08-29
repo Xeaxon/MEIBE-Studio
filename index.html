@@ -23,6 +23,7 @@
       }
     </script>
     <style>
+      /* 動效與玻璃卡片 */
       .fade-in { animation: fadein .8s ease-out; }
       @keyframes fadein { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
       .glass { background: linear-gradient(180deg, rgb(255 255 255 / .65), rgb(255 255 255 / .35)); backdrop-filter: blur(10px); }
@@ -34,7 +35,6 @@
       <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mt-4 flex items-center justify-between rounded-2xl glass shadow-lg px-4 py-3">
           <a href="#top" class="flex items-center gap-3 group">
-            <!-- 左上角 Logo -->
             <img src="./assets/logo.png" alt="MEIBE Studio Logo" class="h-9 w-9 rounded-xl shadow-inner object-cover"/>
             <span class="text-slate-800 font-semibold tracking-wide group-hover:text-brand">MEIBE Studio</span>
           </a>
@@ -86,27 +86,116 @@
       </div>
     </section>
 
-    <!-- 其餘區塊維持不變 -->
-
-    <footer class="bg-white border-t border-slate-200">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-        <div>© 2025 MEIBE Studio 梅設線創意工作室｜統一編號:00565039｜Taipei Taiwan</div>
-        <div class="flex items-center gap-4">
-          <a href="https://github.com/your-github" class="hover:text-brand" aria-label="GitHub">GitHub</a>
-          <a href="https://www.instagram.com/" class="hover:text-brand" aria-label="Instagram">Instagram</a>
-          <a href="mailto:hello@example.com" class="hover:text-brand" aria-label="Email">Email</a>
+    <!-- 服務 -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">我們的服務</h2>
+          <p class="mt-3 text-slate-600">從策略到落地，提供可實際執行的設計解決方案。</p>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition">
+            <div class="inline-flex items-center justify-center rounded-xl bg-yellow-100 text-yellow-700 px-3 py-1 text-xs font-medium">Branding</div>
+            <h3 class="mt-3 font-semibold">品牌識別</h3>
+            <p class="mt-2 text-sm text-slate-600">LOGO／字體／色彩系統與應用手冊。</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition">
+            <div class="inline-flex items-center justify-center rounded-xl bg-yellow-100 text-yellow-700 px-3 py-1 text-xs font-medium">Graphic</div>
+            <h3 class="mt-3 font-semibold">平面設計</h3>
+            <p class="mt-2 text-sm text-slate-600">海報DM、包裝、社群與電商素材。</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition">
+            <div class="inline-flex items-center justify-center rounded-xl bg-yellow-100 text-yellow-700 px-3 py-1 text-xs font-medium">Space</div>
+            <h3 class="mt-3 font-semibold">空間視覺</h3>
+            <p class="mt-2 text-sm text-slate-600">招牌、玻璃貼、導視系統與開幕物料。</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition">
+            <div class="inline-flex items-center justify-center rounded-xl bg-yellow-100 text-yellow-700 px-3 py-1 text-xs font-medium">Media</div>
+            <h3 class="mt-3 font-semibold">影像整合</h3>
+            <p class="mt-2 text-sm text-slate-600">攝影企畫、AI 生成、後製與動態視覺。</p>
+          </article>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <button id="toTop" class="fixed bottom-6 right-6 hidden rounded-full bg-slate-900 text-white w-11 h-11 grid place-items-center shadow-lg" aria-label="返回頂部">↑</button>
+    <!-- 作品集 -->
+    <section id="works" class="py-16 lg:py-24 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900">精選作品</h2>
+            <p class="mt-3 text-slate-600">下方為示意，之後可替換為你的實際案例。</p>
+          </div>
+          <a href="#contact" class="hidden md:inline-flex rounded-xl ring-1 ring-slate-300 px-4 py-2 hover:bg-white">想做類似的？聊聊！</a>
+        </div>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <figure class="group overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition">
+            <img src="https://placehold.co/900x600/png" alt="飲料品牌主視覺" class="h-56 w-full object-cover group-hover:scale-[1.02] transition"/>
+            <figcaption class="p-5">
+              <h3 class="font-semibold">飲料品牌主視覺</h3>
+              <p class="mt-1 text-sm text-slate-600">開幕海報・門市端景</p>
+            </figcaption>
+          </figure>
+          <figure class="group overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition">
+            <img src="https://placehold.co/900x600/png" alt="產品攝影與修圖" class="h-56 w-full object-cover group-hover:scale-[1.02] transition"/>
+            <figcaption class="p-5">
+              <h3 class="font-semibold">產品攝影與修圖</h3>
+              <p class="mt-1 text-sm text-slate-600">瓶器與冰塊特寫</p>
+            </figcaption>
+          </figure>
+          <figure class="group overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition">
+            <img src="https://placehold.co/900x600/png" alt="空間視覺與導視" class="h-56 w-full object-cover group-hover:scale-[1.02] transition"/>
+            <figcaption class="p-5">
+              <h3 class="font-semibold">空間視覺與導視</h3>
+              <p class="mt-1 text-sm text-slate-600">玻璃貼・門神線條</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      const toTop = document.getElementById('toTop');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 600) { toTop.classList.remove('hidden'); } else { toTop.classList.add('hidden'); }
-      });
-      toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    </script>
-  </body>
-</html>
+    <!-- 關於 -->
+    <section id="about" class="py-16 lg:py-24 bg-white">
+      <div class="mx-auto max-w-5xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">關於我們</h2>
+          <p class="mt-4 text-slate-600">我們是位於台北的獨立設計工作室，擅長把複雜訊息轉譯為清晰的視覺語言。重視系統性設計、檔案交付與長期品牌維運。</p>
+          <ul class="mt-4 space-y-2 text-slate-600">
+            <li>・多年商業設計與空間視覺實戰經驗</li>
+            <li>・AI 圖像工作流（Midjourney／Sora）整合</li>
+            <li>・提供可列印與上稿的專業檔案</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold text-slate-800">服務流程</h3>
+          <ol class="mt-3 grid gap-3 text-sm text-slate-600">
+            <li><span class="font-semibold text-slate-800">01 諮詢：</span>需求釐清、時程與預算。</li>
+            <li><span class="font-semibold text-slate-800">02 提案：</span>方向版面與素材規劃。</li>
+            <li><span class="font-semibold text-slate-800">03 製作：</span>設計與修正迭代。</li>
+            <li><span class="font-semibold text-slate-800">04 交付：</span>最終檔案與上線協助。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡 -->
+    <section id="contact" class="py-16 lg:py-24 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">開始你的專案</h2>
+        <p class="mt-3 text-slate-600">留下你的需求與聯絡方式，我們會回覆檔期與報價。下方表單為示意，可改為你習慣的收件方式。</p>
+        <form action="https://formspree.io/f/your-id" method="POST" class="mt-8 grid gap-4 text-left">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="block text-sm">
+              <span class="text-slate-700">姓名</span>
+              <input required name="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand" placeholder="王小梅" />
+            </label>
+            <label class="block text-sm">
+              <span class="text-slate-700">Email</span>
+              <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand" placeholder="you@example.com" />
+            </label>
+          </div>
+          <label class="block text-sm">
+            <span class="text-slate-700">需求說明</span>
+            <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand" placeholder="請描述你的品牌／品項、預算與時程…"></textarea>
+          </label>
+          <button class="mt-2 inline-flex justify-center rounded-xl bg-brand px-5 py-3 text-white font-semibold hover:bg-brand-dark">送出
