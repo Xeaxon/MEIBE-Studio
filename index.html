@@ -10,8 +10,10 @@
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="https://placehold.co/1200x630/png"/>
     <meta name="theme-color" content="#facc15"/>
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
       tailwind.config = {
         theme: {
@@ -23,7 +25,6 @@
       }
     </script>
     <style>
-      /* 動效與玻璃卡片 */
       .fade-in { animation: fadein .8s ease-out; }
       @keyframes fadein { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
       .glass { background: linear-gradient(180deg, rgb(255 255 255 / .65), rgb(255 255 255 / .35)); backdrop-filter: blur(10px); }
@@ -49,14 +50,13 @@
       </nav>
     </header>
 
-    <!-- Hero 區 -->
+    <!-- Hero -->
     <section id="top" class="relative isolate overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-to-b from-yellow-50 to-white">
       <div class="absolute inset-0 -z-10 opacity-70" aria-hidden="true">
-        <svg class="absolute -top-24 -right-24 w-[42rem] h-[42rem] text-yellow-100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="抽象背景">
+        <svg class="absolute -top-24 -right-24 w-[42rem] h-[42rem] text-yellow-100" viewBox="0 0 200 200">
           <path fill="currentColor" d="M47.4,-56.2C60.7,-45.7,70.3,-30.2,73.7,-13.1C77.2,4.1,74.5,22.8,65.6,37.1C56.7,51.5,41.6,61.4,25.6,66.9C9.7,72.4,-7.2,73.5,-22.2,68.3C-37.1,63.1,-50.3,51.7,-60.2,37.3C-70.1,22.9,-76.8,5.6,-74.4,-10.2C-72,-25.9,-60.6,-39.9,-47.3,-50.3C-34,-60.7,-17,-67.6,-0.1,-67.5C16.9,-67.4,33.7,-60.7,47.4,-56.2Z" transform="translate(100 100)"/>
         </svg>
       </div>
-
       <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
         <div class="fade-in">
           <h1 class="text-3xl/tight md:text-5xl/tight font-extrabold tracking-tight text-slate-900">
@@ -178,7 +178,7 @@
       </div>
     </section>
 
-    <!-- 聯絡 -->
+    <!-- 聯絡（保留表單） -->
     <section id="contact" class="py-16 lg:py-24 bg-slate-50">
       <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900">開始你的專案</h2>
@@ -198,4 +198,44 @@
             <span class="text-slate-700">需求說明</span>
             <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand" placeholder="請描述你的品牌／品項、預算與時程…"></textarea>
           </label>
-          <button class="mt-2 inline-flex justify-center rounded-xl bg-brand px-5 py-3 text-white font-semibold hover:bg-brand-dark">送出
+          <button class="mt-2 inline-flex justify-center rounded-xl bg-brand px-5 py-3 text-white font-semibold hover:bg-brand-dark">送出需求</button>
+          <p class="text-xs text-slate-500">* 表單由 Formspree 代收。商用請自行替換為企業信箱或自架後端。</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 頁尾（保留版權；已移除最底灰字區塊） -->
+    <footer class="bg-white border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <div>© 2025 MEIBE Studio 梅設線創意工作室｜統一編號:00565039｜Taipei Taiwan</div>
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/your-github" class="hover:text-brand" aria-label="GitHub">GitHub</a>
+          <a href="https://www.instagram.com/你的帳號" class="hover:text-brand" aria-label="Instagram">Instagram</a>
+          <a href="mailto:hello@example.com" class="hover:text-brand" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 右下角：聯絡按鈕（Email / IG / Line） -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3">
+      <a href="mailto:hello@example.com"
+         class="rounded-full bg-slate-900 text-white w-11 h-11 grid place-items-center shadow-lg hover:bg-slate-700"
+         aria-label="Email">
+         <i class="fas fa-envelope text-lg"></i>
+      </a>
+      <a href="https://www.instagram.com/你的帳號" target="_blank"
+         class="rounded-full bg-pink-500 text-white w-11 h-11 grid place-items-center shadow-lg hover:bg-pink-600"
+         aria-label="Instagram">
+         <i class="fab fa-instagram text-lg"></i>
+      </a>
+      <a href="https://line.me/ti/p/你的LineID" target="_blank"
+         class="rounded-full bg-green-500 text-white w-11 h-11 grid place-items-center shadow-lg hover:bg-green-600"
+         aria-label="Line">
+         <i class="fab fa-line text-lg"></i>
+      </a>
+    </div>
+
+    <!-- JS（目前無需其他功能） -->
+    <script></script>
+  </body>
+</html>
